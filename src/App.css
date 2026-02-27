@@ -1,0 +1,100 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: #12263a;
+  background: linear-gradient(180deg, #f5f8ff 0%, #eaf1ff 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(9, 2.6rem);
+  background: #fefefe;
+  border-radius: 0.4rem;
+  box-shadow: 0 8px 24px rgba(20, 56, 112, 0.15);
+  overflow: hidden;
+}
+
+.cell {
+  width: 2.6rem;
+  height: 2.6rem;
+  text-align: center;
+  border: 1px solid #b8c7e0;
+  font-size: 1.1rem;
+  color: #1b3968;
+  outline: none;
+}
+
+.cell:focus {
+  background: #dce8ff;
+}
+
+.fixed {
+  background: #edf3ff;
+  color: #0f2444;
+  font-weight: 700;
+}
+
+.conflict {
+  background: #ffe0e0;
+  color: #8a1d1d;
+}
+
+.left-bold {
+  border-left: 2px solid #16345e;
+}
+
+.right-bold {
+  border-right: 2px solid #16345e;
+}
+
+.top-bold {
+  border-top: 2px solid #16345e;
+}
+
+.bottom-bold {
+  border-bottom: 2px solid #16345e;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  background: #315da8;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #244983;
+}
